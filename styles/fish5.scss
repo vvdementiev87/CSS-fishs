@@ -1,0 +1,114 @@
+.fish5Section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fish5Animated {
+  & h2 {
+    & .twrap {
+      position: relative;
+      display: inline-block;
+      width: 100px;
+      height: 120px;
+      line-height: 120px;
+      font-size: 120px;
+      border: 15px solid rgba(0, 0, 0, 0.5);
+      perspective: 400;
+      box-shadow: 1px 1px 4px #000;
+    }
+    & .tbg {
+      background: #121212;
+      position: absolute;
+      color: #f2c200;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+    }
+    & .tdown {
+      height: 50%;
+      top: 50%;
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
+      z-index: 1;
+      background: #151515;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+      transition: all 0.3s linear;
+    }
+    & .tdown span,
+    & .tup .tback span {
+      display: block;
+      margin-top: -60px;
+    }
+    & .tup {
+      height: 50%;
+      width: 100%;
+      position: absolute;
+      z-index: 10;
+      transform-origin: 50% 100%;
+      transition: all 0.3s linear;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+    }
+    & .tup .tfront,
+    & .tup .tback {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      overflow: hidden;
+      backface-visibility: hidden;
+      background: #151515;
+    }
+    & .tup .tback {
+      background: #121212;
+      color: #f2c200;
+    }
+
+    .csstransforms3d &.tup .tback {
+      transform: rotateX(-180deg);
+    }
+    .csstransforms3d & a .twrap:hover .tup {
+      transform: rotateX(-180deg);
+    }
+    .no-csstransforms3d & .tup .tback {
+      display: none;
+    }
+    & a {
+      text-decoration: none;
+    }
+    .no-csstransforms3d & a .twrap:hover .tup {
+      animation: moveBackUp 0.7s ease-in-out forwards;
+    }
+    .no-csstransforms3d & a .twrap:hover .tdown {
+      animation: moveBackDown 0.7s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes moveBackUp {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-120%);
+    z-index: -1;
+  }
+  100% {
+    transform: translateY(0%);
+    z-index: -1;
+  }
+}
+@keyframes moveBackDown {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(120%);
+    z-index: -1;
+  }
+  100% {
+    transform: translateY(0%);
+    z-index: -1;
+  }
+}

@@ -1,0 +1,88 @@
+.fish3Section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fish3Animated {
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+}
+.fish3Animated span {
+  display: block;
+  bottom: 0px;
+  width: 9px;
+  height: 5px;
+  background: #9b59b6;
+  position: absolute;
+  -webkit-animation: preloader 1.5s infinite ease-in-out;
+          animation: preloader 1.5s infinite ease-in-out;
+}
+.fish3Animated span:nth-child(2) {
+  left: 11px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.fish3Animated span:nth-child(3) {
+  left: 22px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.fish3Animated span:nth-child(4) {
+  left: 33px;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.fish3Animated span:nth-child(5) {
+  left: 44px;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes preloader {
+  0% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #9b59b6;
+  }
+  25% {
+    height: 30px;
+    transform: translateY(15px);
+    background: #3498db;
+  }
+  50% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #9b59b6;
+  }
+  100% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #9b59b6;
+  }
+}
+
+@keyframes preloader {
+  0% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #9b59b6;
+  }
+  25% {
+    height: 30px;
+    transform: translateY(15px);
+    background: #3498db;
+  }
+  50% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #9b59b6;
+  }
+  100% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #9b59b6;
+  }
+}/*# sourceMappingURL=fish3.css.map */
